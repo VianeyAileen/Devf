@@ -1,0 +1,20 @@
+/* Link que no ha sido visitado */
+#no_visitado:link {
+    color: #0400ff;
+}
+
+/* Link que ya fue visitado */
+#visitado:visited {
+    color: #7700ff;
+}
+
+/* El link cambia de color cuando se coloca el puntero
+sobre el */
+#puntero_sobre:hover {
+    color: #ff0000
+}
+
+/* Para cuando se le da click al link */
+#seleccionado:active {
+    color: #00b3ff
+}
