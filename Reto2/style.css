@@ -13,6 +13,10 @@ div{
     color: black;
 }
 
+.navbar a:hover{
+    text-decoration: underline;
+}
+
 .navbar img{
     width: 18px;
     padding: 4px;
@@ -85,4 +89,45 @@ div{
     line-height: 28px;
     font-size: small;
     font-family: Arial, sans-serif;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #3c4043;
+}
+
+.location{
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: #70757a;
+}
+
+.menu{
+    padding: 15px 30px;
+    margin: 0 auto;
+}
+
+.left_footer a{
+    float: left;
+    text-decoration: none;
+    color: #70757a;
+    padding: 15px;
+}
+
+.right_footer a{
+    float: right;
+    text-decoration: none;
+    color: #70757a;
+    padding: 15px;
+
+}
+
+.left_footer a:hover, .right_footer a:hover{
+    text-decoration: underline;
 }
