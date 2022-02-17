@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de inicio - Netflix</title>
+    <link rel="icon" href="../Reto3/img/icon.png" type="image/x-icon">
+
+    <!-- CSS only --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../Reto3/styles/home.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../Reto3/home.html">
+                <img src="../Reto3/img/logo.png" alt="logo">
+            </a>
+            <ul class="first-navigation">
+                <li class="nav-item">
+                    <a class="current" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Series</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Películas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Novedades populares</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Mi lista</a>
+                </li>
+            </ul>
+            <div class="second-navigation">
+                <i class="fa-solid fa-magnifying-glass fa-0.5x"></i>
+                <a class="nav-element" href="#">Niños</a>
+                <i class="fa-solid fa-bell fa-0.5x"></i>
+                <img class="nav-element"src="../Reto3/img/profile.jpg" alt="profile">
+
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/profile_2.jpg" alt="">
+                                <span>Profile 2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/profile_3.jpg" alt="">
+                                <span>Profile 3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/profile_4.jpg" alt="">
+                                <span>Profile 4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/kids.png" alt="">
+                                <span>Niños</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/editar.png" alt="edit">
+                                <span>Administrar perfiles</span> 
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="item" href="#">
+                                <span>Niños</span>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/perfil.png" alt="profile">
+                                <span>Cuenta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item" href="#">
+                                <img src="../Reto3/img/ayuda.png" alt="ayuda">
+                                <span>Centro de ayuda</span>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="item" href="#">
+                                <span>Cerrar sesión en Netflix</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="principal">
+            <div class="pelicula-principal">
+                <img class="pelicula" src="../Reto3/img/pelicula.webp" alt="">
+                <div class="hero-vignette vignette-layer"></div>
+            </div> 
+            <div class="contenedor">
+               <img src="../Reto3/img/titulo.webp" alt="madre solo hay dos">
+                <p class="descripcion">
+                   Al descubrir que sus bebés fueron intercambiados al nacer,
+                   dos madres muy distintas deciden formar una singular familia.
+                </p>
+                <button type="button" class="btn btn-play">
+                    <i class="fa-solid fa-play"></i>
+                   Reproducir
+                </button>
+                <button type="button" class="btn btn-inf">
+                    <i class="fa-solid fa-circle-info"></i>
+                   Más información
+                </button>
+            </div>
+        </div> 
+        <div class="carruseles mi-lista">
+            <span>Mi Lista</span>
+            <div class="carrusel-img">
+                <img src="../Reto3/img/nailedIt.jpeg" alt="Naild It">
+                <img src="../Reto3/img/Zumbos.jpeg" alt="Zumbo's">
+                <img src="../Reto3/img/Riverdale.webp" alt="Riverdale">
+                <img src="../Reto3/img/Rebelde.jpeg" alt="Rebelde">
+                <img src="../Reto3/img/The Witcher.jpeg" alt="The Witcher">
+                <img src="../Reto3/img/Shannara.webp" alt="Shannara">
+            </div>
+        </div>
+        <div class="carruseles populares">
+            <span>Populares en netflix</span>
+            <div class="carrusel-img">
+                <img src="../Reto3/img/Inventando.jpeg" alt="Inventando A Anna">
+                <img src="../Reto3/img/EstamosMuertos.jpeg" alt="Estamos Muertos">
+                <img src="../Reto3/img/Shadow.jpeg" alt="Shadow Hunters">
+                <img src="../Reto3/img/ComoCriar.jpeg" alt="Cómo Criar a un Superhperoe">
+                <img src="../Reto3/img/supergirl.webp" alt="Super Girls">
+                <img src="../Reto3/img/cieloGrande.jpeg" alt="Cielo Grande">
+            </div>
+        </div>
+        <div class="carruseles tendencias">
+            <span>Tendencias</span>
+            <div class="carrusel-img">
+                <img src="../Reto3/img/OscuroDeseo.jpeg" alt="Oscuro Deseo">
+                <img src="../Reto3/img/SoyGeorgina.jpeg" alt="Soy Georgina">
+                <img src="../Reto3/img/CobraKai.jpeg" alt="Cobra Kai">
+                <img src="../Reto3/img/EmilyEnParis.jpeg" alt="Emily En Paris">
+                <img src="../Reto3/img/LoveTactics.jpeg" alt="Love Tactics">
+                <img src="../Reto3/img/Insatiable.jpeg" alt="Insatiable">
+            </div>
+        </div>
+        <div class="carruseles recientes">
+            <span>Agregadas recientemente</span>
+            <div class="carrusel-img">
+                <img src="../Reto3/img/LoveTactics.jpeg" alt="Love Tactics">
+                <img src="../Reto3/img/Dora.webp" alt="Dora">
+                <img src="../Reto3/img/LaDivinaGula.jpeg" alt="La Divina Gula">
+                <img src="../Reto3/img/TratamientoReal.jpeg" alt="Tratamiento Real">
+                <img src="../Reto3/img/LaLeyenda.webp" alt="La Leyenda">
+                <img src="../Reto3/img/JugarEnCasa.jpeg" alt="Jugar En Casa">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a class="link" href="https://www.facebook.com/Netflixmx" target="_blank">
+                <i class="fa-brands fa-facebook-f fa-xl"></i>
+            </a>
+            <a class="link" href="https://www.instagram.com/NetflixLAT" target="_blank">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+            </a>
+            <a class="link" href="https://twitter.com/netflixLAT" target="_blank">
+                <i class="fa-brands fa-twitter fa-xl"></i>
+            </a>
+            <a class="link" href="https://www.youtube.com/channel/UC5ZiUaIJ2b5dYBYGf5iEUrA" target="_blank">
+                <i class="fa-brands fa-youtube fa-xl"></i>
+            </a>
+        </div>
+        <ul class="menu-footer">
+            <li>Audio y subtítulos</li>
+            <li>Audio descriptivo</li>
+            <li>Centro de ayuda</li>
+            <li>Tarjetas de regalo</li>
+            <li>Prensa</li>
+            <li>Relaciones con inversionistas</li>
+            <li>Empleo</li>
+            <li>Términos de uso</li>
+            <li>Privacidad</li>
+            <li>Avisos legales</li>
+            <li>Preferencias de cookies</li>
+            <li>información corporativa</li>
+            <li>Contactanos</li>
+
+        </ul>
+        <button type="button" class="btn">Código de servicio</button>
+        <p>
+            © 1997-2022 Netflix, Inc.
+           {d7f02b51-38ae-47fd-a295-6aae206dffe1}
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/64c807eda1.js" crossorigin="anonymous"></script>
+</body>
+</html>
