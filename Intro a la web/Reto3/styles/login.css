@@ -1,0 +1,192 @@
+body{
+    background: url(../img/back.jpeg);
+    background-size: cover;
+}
+
+.background{
+    position: absolute;
+    background-image: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5)100%);
+    height: 920px;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar{
+    height: 150px;
+    padding: 0 4%;
+    z-index: 10;
+}
+
+.navbar_logo{
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: -70px;
+}
+
+.navbar-brand img{
+    margin-top: 20px;
+    width: 150px;
+}
+
+form{
+    background: rgba(0,0,0,0.8);
+    padding: 0 2.4vw;
+}
+
+.login{
+    margin: 0 auto -236px;
+    min-height: 100vh;
+    max-width: 450px;
+    padding: 60px 68px 40px;
+    margin-bottom: 90px;
+}
+
+.login h1{
+    color: white;
+    font-size: 32px;
+    margin-bottom: 28px;
+
+}
+
+.form-floating{
+    position: relative;
+    padding-bottom: 16px;
+    color: #8c8c8c;
+    font-size: 16px;
+    
+}
+
+.form-control{
+    background: #333;
+    border: none;
+}
+
+.form-control:focus{
+    background-color: #333;
+}
+
+.form-floating label{
+    left: 20px;
+}
+
+.btn{
+    min-width: 314px;
+    background: #e50914;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+    padding: 16px;
+}
+
+.form-check-input:valid{
+    background-color: rgb(97, 97, 97);
+}
+
+.form-check-label{
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-help{
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 90px;
+    text-decoration: none;
+}
+
+.form-help:hover{
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+.login-other{
+    margin-top: 16px;
+}
+
+.facebook-icon{
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.login-other span{
+    color: #737373;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.suscribirse{
+    color: #737373;
+    margin-top: 16px;
+    font-size: 16px;    
+}
+
+.suscribirse a{
+    color: white;
+    text-decoration: none;
+}
+
+.suscribirse a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.mas-informacion{
+    color: #8c8c8c;
+    margin-top: 11px;
+    font-size: 13px;
+}
+
+.mas-informacion a{
+    text-decoration: none;
+}
+
+.mas-informacion a:hover{
+    text-decoration: underline;
+    color: #0071eb;
+}
+
+footer{
+    padding: 0 18%;
+    color: gray;
+    background: rgba(0,0,0,0.85);
+    padding-top: 20px;
+}
+
+.llama{
+    margin-bottom: 1em;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+.menu-footer{
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 14px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu-footer li{
+    margin-bottom: 16px;
+    flex: 0 0 25%;
+}
+
+.btn-footer{
+    margin-bottom: 20px;
+    padding: 0.5em;
+    font-size: 13px;
+    background-color: transparent;
+    color: #8c8c8c;
+    border-radius: 0;
+    border: solid 1px;
+}
