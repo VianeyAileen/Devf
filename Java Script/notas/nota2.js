@@ -90,7 +90,7 @@ console.log(miNombre.toUpperCase()) // Convierte toda a mayúsculas
 console.log(miNombre.toLowerCase()) // Convierte todo a minúsculas
 
 // startsWith()
-// trim() quita espacios antes y después de un stting
+// trim() quita espacios antes y después de un string
 // charAt()
 // indexOf()
 // replace()
