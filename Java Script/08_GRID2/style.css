@@ -1,0 +1,59 @@
+/* .row{
+    height: 300px;
+}
+
+[class*=col]{
+    background-color: aquamarine;
+}
+
+.pad-alt{
+    height: 95%;
+    margin: 5px;
+    background-color: blue;
+} */
+
+/* .row{
+    min-height: 50px;
+}
+
+[class*=col]{
+    background-color: aliceblue;
+    border: black solid 2px;
+} */
+
+/* .row{
+    background-color: antiquewhite;
+    margin: 10px;
+    height: 100px;
+}
+
+[class*=col]{
+    background-color: blueviolet;
+    border: black solid 2px;
+} */
+
+/* .container{
+    background-color: rgb(124, 66, 124);
+    width: 300%;
+} */
+
+/* .row{
+    height: 170px;
+}
+
+[class*=col]{
+    background-color: rgb(200, 106, 200);
+    border: black solid 2px;
+    height: 50px;
+} */
+
+.row{
+    background-color: antiquewhite;
+    margin: 10px;
+    height: 100px;
+}
+
+[class*=col]{
+    background-color: blueviolet;
+    border: black solid 2px;
+}

@@ -1,0 +1,41 @@
+.container{
+    margin-top: 20px;
+    width: 35%;
+    border: black solid 5px;
+}
+
+[class*="col"] {
+    border-left: black solid 7px;
+    border-right: black solid 7px;
+}
+
+[class*="row"] {
+    border-bottom: black solid 5px;
+    border-top: black solid 5px;
+}
+
+
+#a, #e, #f {
+    background-color: white;
+}
+
+#d {
+    background-color: blue;
+}
+
+#c {
+    background-color: red;
+    height: 300px;
+}
+
+#g {
+    background-color: yellow;
+}
+
+#a, #b, #d{
+    height: 150px;
+}
+
+#f, #g {
+    height: 75px;
+}
