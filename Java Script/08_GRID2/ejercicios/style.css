@@ -1,0 +1,10 @@
+.row{
+    background-color: antiquewhite;
+    margin: 10px;
+    height: 60px;
+}
+
+[class*=col]{
+    background-color: blueviolet;
+    border: black solid 1px;
+}
