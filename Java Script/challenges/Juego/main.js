@@ -40,17 +40,18 @@ function juego(jugada){
     // Hacemos la comparación
     var comparacion = compara(jugada_usuario, jugada_pc)
     if(comparacion == 1){
-        ganador.innerHTML = 'Usuario seleccionó ' + jugada_usuario + 
-                            '<br> Computadora seleccionó ' + jugada_pc + 
-                            '<br> <span class="winner"> Felicidades ganó la partida 🤩 </span>' 
+        ganador.innerHTML = '<span class="winner"> Felicidades ganó la partida 🤩 </span>' +
+                            '<br> Usuario seleccionó ' + jugada_usuario + 
+                            '<br> Computadora seleccionó ' + jugada_pc
+             
     } else if(comparacion == 2){
-        ganador.innerHTML = 'Usuario seleccionó ' + jugada_usuario +
-                            '<br> Computadora seleccionó ' + jugada_pc + 
-                            '<br> <span class="loser"> Oh no! La computadora ganó la partida 🥺 </span>' 
+        ganador.innerHTML = '<br> <span class="loser"> Oh no! La computadora ganó la partida 🥺 </span>' +
+                            '<br> Usuario seleccionó ' + jugada_usuario +
+                            '<br> Computadora seleccionó ' + jugada_pc 
     } else {
-        ganador.innerHTML = 'Usuario seleccionó ' + jugada_usuario + 
-                            '<br> Computadora seleccionó ' + jugada_pc + 
-                            '<br> <span class="tie"> Empate 😮 </span>' 
+        ganador.innerHTML = '<span class="tie"> Empate 😮 </span>' +
+                            '<br> Usuario seleccionó ' + jugada_usuario + 
+                            '<br> Computadora seleccionó ' + jugada_pc
     }
 
 }
