@@ -1,0 +1,21 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+#respuesta{
+    border: solid 1px;
+    border-radius: 4px;
+    margin: 20px 40%;
+    width: 310px;
+}
+
+img{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+}
+
+.none{
+    display: none;
+}
