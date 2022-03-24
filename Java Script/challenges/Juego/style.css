@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(240, 174, 240);
+}
+
+h1, h2{
+    text-align: center;
+    color: rgb(71, 71, 71);
+}
+
+.btn-group{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    margin: 10px 20px 0px;
+}
+
+button:hover{
+    background-color: rgb(163, 77, 179);
+    border-radius: 50%;
+    border: solid white 2px
+}
+
+img{
+    width: 35%;
+}
+
+#tijeras{
+    width: 50%;
+}
+
+.respuesta{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(71, 71, 71);
+    margin-top: 20px;
+}
+
+.winner{
+    color: rgb(38, 161, 0);
+    font-size: 30px;
+}
+
+.loser{
+    color: red;
+    font-size: 30px;
+}
+
+.tie{
+    color: blue;
+    font-size: 30px;
+}
