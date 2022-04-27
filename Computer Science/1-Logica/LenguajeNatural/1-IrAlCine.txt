@@ -1,0 +1,20 @@
+# Practica 1
+Analizar y diseñar la solución para el siguiente problema:
+Definición: ¿Que tengo que hacer para ir al cine a ver Dr Strange?
+
+1. Elegir al cine al que quiero ir
+2. Elegir el idioma en que quiero ver la peli
+3. Seleccionar el horario
+4. Seleccionar mis asientos
+5. Pagar los boletos
+6. Imprimir o guardar mis boletos
+7. Dirigirme al cine
+8. Ir a la dulceria
+9. Comprar palomitas, refrescos, dulces, etc
+10. Pagar lo que compre en dulceria
+11. Dirigirme a la sala 
+12. Entregar mis boletos
+13. Entrar a la sala
+14. Ubicar mis asientos
+15. Dirigirme a mis asientos y sentarme
+16. Disfrutar de la peli

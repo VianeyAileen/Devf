@@ -1,0 +1,83 @@
+# Practica 2
+Definir, analizar y diseñar la solución para el siguiente problema:
+“Quiero una calculadora de áreas y perímetros para figuras”.
+
+# Paso 1 - Definirla (Indagar)
+
+1. ¿Qué figuras quieres calcular?
+Rectangulo, triángulo y cuadrado
+
+2. ¿el cliente/usuario dará medidas?
+SI
+
+3. ¿se puede calcular 3 figuras al mismo tiempo o como funciona el orden del programa?
+El usuario indique la figura y la magnitud que quiere calcular
+
+4. ¿Quieres calcular el area o perímetro de forma independiente o en conjunto?
+Solo una a la vez
+
+5. En la parte de triangulos incluimos todos los tipos de triangulos?
+Solo resolver para triangulos isoceles
+
+6. ¿Las dimensiones en que momento se insertan?
+Despues de decidir la magnitud y figura a calcular
+
+7. ¿Unidad de medida?
+Centimetros
+
+8. ¿Conversión?
+No, solo centimentros de entrada y de salida.
+
+9. ¿La calculadora va a mostrar el procedimiento y formulas?
+No, solo pedir figura, magnitud y dimensiones y devolver el resultado
+
+10. Planeas implementar mas cálculos o figuras a futuro?
+No, pero algun dia podria usar esferas, romboides, cilindros.
+
+11. Se desean acumular o guardar los resultados para consultarlos más tarde
+No, solo mostrar en pantalla
+
+“Quiero una calculadora de áreas y perímetros para figuras”.
+
+# Paso 2 - Escribir la definición
+“Quiero una calculadora de áreas y perímetros para figuras. La calculadora
+solicitara al usuario el nombre de la figura, magnitud a calcular y medidas. 
+Entonces calcula y devolvera un resultado. Una vez terminado un flujo, se puede
+calcular los datos de otra figura si se vuelve a ingresar las entradas.
+NOTA 1: Todo en centimetros.
+NOTA 2: En triangulo solo considerar el isoceles.
+NOTA 3: Considerar que quiza despues haya mas figuras.
+”.
+
+# Paso 3 - Algoritmo en lenguaje natural
+1. Seleccionar que figura quiero para calcular
+2. Seleccionar si quiero el áreo o perímetro
+3. Si es cuadrado y se selecciono área
+    3.1 Pedir un lado
+    3.2 Realizar calculo lado * lado
+    3.3 Devolver resultado
+4. Si es cuadrado y se selecciono perímetro
+    4.1 Pedir un lado
+    4.2 Realizar calculo lado * 4
+    4.3 Devolver resultado
+5. Si es rectángulo y se selecciono área
+    5.1 Pedir la base
+    5.2 Pedir la altura
+    5.3 Realizar calculo base * altura
+    5.4 Devolver resultado
+6. Si es rectángulo y se selecciono perímetro
+    6.1 Pedir la base
+    6.2 Pedir la altura
+    6.3 Realizar calculo 2(base) + 2(altura)
+    6.4 Devolver resultado
+7. Si es triángulo y se selecciono área
+    7.1 Pedir la base
+    7.2 Pedir la altura
+    7.3 Realizar calculo (base * altura)/2
+    7.4 Devolver resultado
+8. Si es rectángulo y se selecciono perímetro
+    8.1 Pedir la base
+    8.2 Pedir un lado
+    8.3 Realizar calculo 2(lado) + base
+    8.4 Devolver resultado
+9. Si no se ingreso nada mandar un error
