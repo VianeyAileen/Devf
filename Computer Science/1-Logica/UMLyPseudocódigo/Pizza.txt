@@ -1,0 +1,12 @@
+INICIO
+    Sentarme // Lee "escoger mesa"
+    Atiende mesero
+    Ve menú
+    Eligen pizza
+    Piden la pizza
+    Mesero solicita pizza
+    Cocinero prepara pizza
+    Cocinero cocina pizza
+    Cocinero entrega pizza a mesero
+    Mesero sirve pizza
+FIN

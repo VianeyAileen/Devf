@@ -1,0 +1,12 @@
+INICIO
+    Lee "Entrar a clase"
+    Saludos de Bienvenida
+    Aclaraciones de dudas y repaso
+    Ver temas del día
+    SI ya son las 8:00 Y no hay dudas ENTONCES 
+        preguntar al sensie
+    FIN SI
+    SI el sensie autorizo ENTONCES 
+        ir al receso
+    FIN SI
+FIN
