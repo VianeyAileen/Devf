@@ -1,0 +1,18 @@
+.list-group-item:hover i {
+    display: none;
+}
+
+.list-group-item:hover button {
+    display: inline
+}
+
+.bi-trash3-fill {
+    padding: 0;
+    border: none;
+    background: none;
+    display: none;
+}
+
+.checkbox-container{
+    margin-top: 10px;
+}
