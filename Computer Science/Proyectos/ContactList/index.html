@@ -13,48 +13,11 @@
         <div class="contact_card">
             <div class="list">
                 <div class="searching_bar">
-                    <input type="text" id="student" name="student" placeholder="Buscar Contacto">
+                    <input type="text" id="characterInput" name="characterInput" placeholder="Buscar Contacto">
                 </div>
-
-                <div>
-                    <ul class="contact_list">
-                        <div>
-                            <li>
-                                <div class="card">
-                                    <div class="photo">
-                                        <img src="https://cdn-icons.flaticon.com/png/128/4223/premium/4223610.png?token=exp=1652317369~hmac=624fdcdcb441ff399acf9f4923b1d699" alt="contact">
-                                    </div>
-                                    <div class="text">Contacto 1</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="card">
-                                    <div class="photo">
-                                        <img src="https://cdn-icons.flaticon.com/png/128/4223/premium/4223610.png?token=exp=1652317369~hmac=624fdcdcb441ff399acf9f4923b1d699" alt="contact">
-                                    </div>
-                                    <div class="text">Contacto 2</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="card">
-                                    <div class="photo">
-                                        <img src="https://cdn-icons.flaticon.com/png/128/4223/premium/4223610.png?token=exp=1652317369~hmac=624fdcdcb441ff399acf9f4923b1d699" alt="contact">
-                                    </div>
-                                    <div class="text">Contacto 3</div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="card">
-                                    <div class="photo">
-                                        <img src="https://cdn-icons.flaticon.com/png/128/4223/premium/4223610.png?token=exp=1652317369~hmac=624fdcdcb441ff399acf9f4923b1d699" alt="contact">
-                                    </div>
-                                    <div class="text">Contacto 4</div>
-                                </div>
-                            </li>
-                        </div>
+                <div class="list_container">
+                    <ul id="contacts_ul" class="contact_list">                        
+                        <!-- Se crea desde el index.js  -->
                     </ul>
                 </div>
             </div>
