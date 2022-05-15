@@ -43,6 +43,7 @@ const renderLanguagesList = (languages) => {
     }
 }
 
+// Construye los elementos en la vista
 const renderElementList = (element, index) => {
     // Creación de elementos hijos
     const liElement = document.createElement('li')
@@ -68,6 +69,7 @@ const renderElementList = (element, index) => {
     divElement.appendChild(buttonElement)
 }
 
+// Asigna el icono de acuerdo al status que se hay seleccionado
 const setClassForIcon = (iElement, status) => {
     if (status === STARTED_STATUS) {
         iElement.classList.add('bi', 'bi-play-circle-fill', 'text-primary')
@@ -79,15 +81,18 @@ const setClassForIcon = (iElement, status) => {
     // iElement.classList.add('bi', 'bi-pause-circle-fill', 'text-warning')
 }
 
+// Limpia el formulario
 const resetForm = (languageElement, statusRadioElement) => {
     languageElement.value = ''
     Array.from(statusRadioElement).forEach(element => element.checked = false)
 }
 
+// Limpia al HTML
 const cleanView = () => {
     ulElement.innerHTML = ''
 }
 
+// Elimina a los lengaujes seleccionados y reajusta el contador
 const handleDeleteClick = (event) => {
     const positionStr = event.target.getAttribute('index')
     const position = parseInt(positionStr)
@@ -97,6 +102,7 @@ const handleDeleteClick = (event) => {
     renderLanguagesList(languages)
 }
 
+// Muestra el contador
 const renderContador = (languagesArray) => {
     const countAll = document.querySelector('#language-all')
     const countComplete = document.querySelector('#languages-complete')
@@ -113,11 +119,13 @@ const renderContador = (languagesArray) => {
     countPending.innerHTML = pendings
 }
 
+// Obtiene el conteo para los lenguajes cuyo status ha sido termiando
 const getCompletes = (languagesArray) => {
     const completeElementsArray = languagesArray.filter(element => element.status === FINISHED_STATUS)
     return completeElementsArray.length
 }
 
+// Obtiene el conteo para los lenguajes cuto status es iniciado o standBy
 function getPendings(languagesArray) {
     let num = 0
     for (let i = 0; i < languagesArray.length; i++) {
