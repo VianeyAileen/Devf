@@ -7,7 +7,7 @@ const initial = document.querySelector('#initial')
 let pokemons = []
 
 const main = () => {
-    fetch('/Computer Science/Proyectos/ProyectoFinal/api/character.json')
+    fetch('https://Pokedex/api/character.json')
      .then(response => response.json())
      .then(data => normalizeData(data))
      .then(pokemons => {
