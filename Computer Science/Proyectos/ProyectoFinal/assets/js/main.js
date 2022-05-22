@@ -1,22 +1,24 @@
 // Get the root element
 const containerElement = document.querySelector('.container')
 const searchPokemon = document.querySelector('#pokemonInput')
+const spinner = document.querySelector('#spin')
+const selectType = document.querySelector('#type')
+const initial = document.querySelector('#initial')
 let pokemons = []
 
 const main = () => {
     fetch('/Computer Science/Proyectos/ProyectoFinal/api/character.json')
      .then(response => response.json())
      .then(data => normalizeData(data))
-    //  .then(data => data.forEach(renderPokemons))
      .then(pokemons => {
-         let i = 0
+        let i = 0
          while (i < pokemons.length) {
              renderPokemons(pokemons[i])
              i++
+             spinner.style.display = "none"
         }
     })
 }
-main()
 
 // Normalize the data
 const normalizeData = (data) => {
@@ -26,7 +28,7 @@ const normalizeData = (data) => {
             image: ThumbnailImage,
             number: number,
             name: name,
-            type: type,
+            type: type.join(', '),
             abilities: abilities,
             weight: weight,
             height: height
@@ -34,12 +36,6 @@ const normalizeData = (data) => {
         pokemons.push(pokemon)
     })
     return pokemons
-}
-
-const fetchPokemons = (number) => {
-    for (let i = 0; i <= number; i++) {
-        main(i)        
-    }
 }
 
 // Show pokemons in the HTML
@@ -67,10 +63,10 @@ const renderPokemons = (element) => {
     pName.innerHTML = element.name
     cardBack.classList.add('flip-card-back')
     h2.innerHTML = element.name
-    pType.innerHTML = 'Type: ' + element.type
-    pAbilities.innerHTML = 'Abilities: ' + element.abilities
-    pWeight.innerHTML = 'Weight: ' + element.weight
-    pHeight.innerHTML = 'Height: ' + element.height
+    pType.innerHTML = '<strong>Type:</strong> ' + element.type
+    pAbilities.innerHTML = '<strong>Abilities:</strong> ' + element.abilities
+    pWeight.innerHTML = '<strong>Weight:</strong> ' + element.weight
+    pHeight.innerHTML = '<strong>Height:</strong> ' + element.height
 
     img.setAttribute('src', element.image)
 
@@ -97,7 +93,7 @@ searchPokemon.addEventListener('keyup', (event) => {
     pokemonsFiltered.forEach(renderPokemons)
 })
 
-// Limpia la vista
+// Clean the view
 const cleanView = () => {
     containerElement.innerHTML = ''
 }
@@ -111,3 +107,28 @@ const filterPokemon = (searchingText) => {
     })
     return pokemonsFiltered
 }
+
+// Selectors
+// Search by type
+selectType.addEventListener('change', (event) => {
+    const pokemonType = event?.target?.value || ''
+    const newType = pokemons.filter((element) => {
+        const pokemonT = (element.type).toLocaleLowerCase()
+        return pokemonT.includes(pokemonType)
+    })
+    cleanView()
+    newType.forEach(renderPokemons)
+})
+
+// Search by initial
+initial.addEventListener('change', (event) => {
+    const pokemonInitial = event?.target?.value || ''
+    const newInitial = pokemons.filter((element) => {
+        const pokemonI = element.name
+        return pokemonI.startsWith(pokemonInitial)
+    })
+    cleanView()
+    newInitial.forEach(renderPokemons)
+})
+
+main()
