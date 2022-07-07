@@ -1,28 +1,12 @@
-const tareas = [
-    {
-        id: 1,
-        texto: 'Ir al doctor',
-        fecha: '5 de Julio del 2022',
-        terminada: true
-    },
-    {
-        id: 2,
-        texto: 'Ir al cine',
-        fecha: '10 de Julio del 2022',
-        terminada: false
-    },
-    {
-        id: 3,
-        texto: 'Ir al supermercado',
-        fecha: '11 de Julio del 2022',
-        terminada: false
-    }
-]
+import Tarea from "./Tarea"
 
-const Tareas = () => {
+const Tareas = ({tareas, onDelete, onToggle}) => {
+  
   return (
     <>
-    {tareas.map((tarea) => (<h3 key={tarea.id}>{tarea.texto}</h3>))}
+    {tareas.map((tarea) => (
+      <Tarea key={tarea.id} tarea={tarea} onDelete={onDelete} onToggle={onToggle} />
+    ))}
     </>
   )
 }
