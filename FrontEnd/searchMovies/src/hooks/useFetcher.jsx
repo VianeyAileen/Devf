@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react'
-import getMovies from '../utils/getMovies'
+import { getMovies } from '../utils/getMovies'
 
 const useFetcher = (query = 'batman') => {
-  const [data, setData] = useState([])
+  const [dataState, setDataState] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
 
   const getData = async () => {
     const { data } = await getMovies(query)
-    if (data.Response === 'False') {
-      setError(data.Error)
-      setData([])
+    if (data.Response !== 'False') {
+      setDataState(data.Search)
     } else {
-      setData(data.Search)
+      setDataState([])
     }
-    setData(data.Search)
     setLoading(false)
   }
 
@@ -22,7 +19,7 @@ const useFetcher = (query = 'batman') => {
     getData()
   }, [query])
 
-  return { data, loading, error }
+  return { dataState, loading }
 }
 
 export default useFetcher

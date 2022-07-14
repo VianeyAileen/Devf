@@ -1,10 +1,9 @@
 import CardMovie from './CardMovie'
 
 const Movies = ({ data }) => {
-  console.log(data)
   return (
     data.length === 0
-      ? 'No se encontaron resultados'
+      ? <p className='text-center'>No se encontraron resultados</p>
       : (
         <ul className='row gx-0 gx-md-5 gy-4'>
           {data.map(item => (
