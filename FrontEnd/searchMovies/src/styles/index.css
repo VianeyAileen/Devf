@@ -11,6 +11,10 @@ ul {
   padding-inline-start: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 1;
