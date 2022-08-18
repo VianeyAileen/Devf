@@ -3,7 +3,10 @@ Repositorio donde se subirán todos los ejercicios y retos que se hagan a lo lar
 
 ## Katas
 - [Intro a la web](https://github.com/VianeyAileen/Devf/tree/master/Intro%20a%20la%20web)
-- [Java Script](https://github.com/VianeyAileen/Devf/tree/master/Java%20Script)
+- [JavaScript](https://github.com/VianeyAileen/Devf/tree/master/Java%20Script)
+- [Computer Science](https://github.com/VianeyAileen/Devf/tree/master/Computer%20Science)
+- [JavaScript Avanzado](https://github.com/VianeyAileen/Devf/tree/master/JavaScriptAvanzado)
+- [Frontend](https://github.com/VianeyAileen/Devf/tree/master/FrontEnd)
 
 ## Autora :bust_in_silhouette:
 - [VianeyAileen](https://github.com/VianeyAileen) (Vianey Aileen Borras Pablo).
