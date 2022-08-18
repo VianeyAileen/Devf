@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiKey = 'ca342987'
-const baseUrl = `http://www.omdbapi.com/?i=tt3896198&apikey=${apiKey}`
+const baseUrl = `http://www.omdbapi.com/?&apikey=${apiKey}`
 
 export const getMovies = async (query) => {
   return await axios.get(`${baseUrl}&s=${query}`)

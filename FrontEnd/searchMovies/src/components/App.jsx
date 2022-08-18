@@ -20,19 +20,23 @@ function App () {
 
   return (
     <section className='container'>
-      <h4 className='py-4 text-center'>Buscador Películas</h4>
+      {/* <Form onSubmit={handleSubmit} search={searchRef} /> */}
       <form onSubmit={handleSubmit}>
         <div className='input-group'>
           <input
             ref={searchRef}
             type='search'
-            placeholder='Nombre de la película...'
+            placeholder='Movie name...'
             className='form-control'
             name='buscador'
           />
           <button className='btn btn-primary'>Buscar</button>
         </div>
       </form>
+      <br />
+      <br />
+      <br />
+      <br />
       <section className='py-4'>
         {loading ? <Loading /> : <Movies data={movies} />}
       </section>
