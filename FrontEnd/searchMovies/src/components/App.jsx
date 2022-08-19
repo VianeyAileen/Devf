@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 
-// hooks
+// Hooks
 import useFetcher from '../hooks/useFetcher'
 
 // Componentes
@@ -20,7 +20,6 @@ function App () {
 
   return (
     <section className='container'>
-      {/* <Form onSubmit={handleSubmit} search={searchRef} /> */}
       <form onSubmit={handleSubmit}>
         <div className='input-group'>
           <input

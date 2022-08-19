@@ -14,8 +14,24 @@ body {
 
 .input-group {
   float: right;
-  padding-top: 1.5rem;
+  margin-top: 1.5rem;
   width: 35%;
+  box-shadow: 4px 4px 10px #8a8a8a
+}
+
+.input-group ::placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+.input-group input {
+  background: rgba(116, 153, 190, 0.8);
+  border: none;
+}
+
+.input-group button {
+  background: rgba(24, 109, 194, 0.8);
+  border: none;
 }
 
 ul {
@@ -25,6 +41,20 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.card {
+  background: rgba(116, 153, 190, 0.8);
+  border-radius: 15px;
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.hover :hover {
+  opacity: 50%;
 }
 
 .movie {
