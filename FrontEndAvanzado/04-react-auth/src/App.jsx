@@ -1,11 +1,16 @@
+import { BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
+import MainRoutes from './Routes'
 
 function App () {
   return (
 
-    <div className='App'>
-      <Header />
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Header />
+        <MainRoutes />
+      </div>
+    </BrowserRouter>
   )
 }
 
