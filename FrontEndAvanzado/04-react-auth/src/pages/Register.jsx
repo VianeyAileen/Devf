@@ -1,13 +1,31 @@
 import useForm from '@/hooks/useForm'
+import { RegisterUser } from '@/services/UserServices'
+import { useNavigate } from 'react-router-dom'
 
 function Register () {
-  const sendData = () => console.log('sendData')
+  // Usamos el hook navigate para navegar hacia login
+  const navigate = useNavigate()
+
+  //   Función que envia los datos
+  const sendData = async (data) => {
+    try {
+      const result = await RegisterUser(data)
+
+      if (result.status === 200) {
+        navigate('/login')
+      }
+      console.log(result)
+    } catch (error) {
+      alert('Ocurrió un error ' + error.message)
+      console.log(error)
+    }
+  }
 
   const { input, handleInputChange, handleSubmit } = useForm(sendData, {
     first_name: '',
     last_name: '',
     birth_date: '',
-    gender: '',
+    gender: 'Select gender',
     email: '',
     password: ''
   })
@@ -34,7 +52,9 @@ function Register () {
         </label>
         <input
           type='text'
-          name='last-name'
+          name='last_name'
+          onChange={handleInputChange}
+          value={input.last_name}
           className='form-control'
           id='last-name'
           placeholder='Doe'
@@ -44,13 +64,26 @@ function Register () {
         <label htmlFor='birth' className='form-label'>
           Birthday
         </label>
-        <input type='date' className='form-control' id='birth' />
+        <input
+          type='date'
+          name='birth_date'
+          onChange={handleInputChange}
+          value={input.birth_date}
+          className='form-control'
+          id='birth'
+        />
       </div>
       <div className='mb-3'>
         <label htmlFor='last-name' className='form-label'>
           Gender
         </label>
-        <select className='form-select'>
+        <select
+          className='form-select'
+          name='gender'
+          onChange={handleInputChange}
+          value={input.gender}
+        >
+          <option value='Select gender' disabled>Select a gender</option>
           <option value='M'>M</option>
           <option value='F'>F</option>
         </select>
@@ -62,6 +95,9 @@ function Register () {
         <input
           type='email'
           className='form-control'
+          name='email'
+          onChange={handleInputChange}
+          value={input.email}
           id='exampleFormControlInput1'
           placeholder='name@example.com'
         />
@@ -71,12 +107,23 @@ function Register () {
           Password
         </label>
         <div className='col-sm-10'>
-          <input type='password' className='form-control' id='inputPassword' />
+          <input
+            type='password'
+            className='form-control'
+            name='password'
+            onChange={handleInputChange}
+            value={input.password}
+            id='inputPassword'
+          />
         </div>
       </div>
       <div className='row'>
         <div className='col-8 offset-2'>
-          <button type='button' className='btn btn-primary w-100'>
+          <button
+            type='button'
+            className='btn btn-primary w-100'
+            onClick={handleSubmit}
+          >
             Primary
           </button>
         </div>
