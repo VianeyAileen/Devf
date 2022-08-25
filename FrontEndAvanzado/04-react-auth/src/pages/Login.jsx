@@ -1,4 +1,28 @@
+import useForm from '@/hooks/useForm'
+import { LoginUser } from '@/services/UserServices'
+import { useNavigate } from 'react-router-dom'
+
 function Login () {
+  const navigate = useNavigate()
+  const sendData = async (data) => {
+    try {
+      const result = await LoginUser(data)
+
+      if (result.status === 200) {
+        navigate('/dashboard')
+      }
+      console.log(result)
+    } catch (error) {
+      alert('Ocurrió un error ' + error.message)
+      console.log(error)
+    }
+  }
+
+  const { input, handleInputChange, handleSubmit } = useForm(sendData, {
+    email: '',
+    password: ''
+  })
+
   return (
     <form className='container'>
       <div className='mt-5 mb-3'>
@@ -8,22 +32,36 @@ function Login () {
         <input
           type='email'
           className='form-control'
+          name='email'
+          onChange={handleInputChange}
+          value={input.email}
           id='exampleFormControlInput1'
           placeholder='name@example.com'
         />
       </div>
       <div className='mb-3'>
-        <label htmlFor='inputPassword' className='col-sm-2 col-form-label'>
+        <label htmlFor='inputPassword'>
           Password
         </label>
-        <div className='col-sm-10'>
-          <input type='password' className='form-control' id='inputPassword' />
+        <div>
+          <input
+            type='password'
+            className='form-control'
+            name='password'
+            onChange={handleInputChange}
+            value={input.password}
+            id='inputPassword'
+          />
         </div>
       </div>
       <div className='row'>
         <div className='col-8 offset-2'>
-          <button type='button' className='btn btn-primary w-100'>
-            Primary
+          <button
+            type='button'
+            className='btn btn-primary w-100'
+            onClick={handleSubmit}
+          >
+            Login
           </button>
         </div>
       </div>

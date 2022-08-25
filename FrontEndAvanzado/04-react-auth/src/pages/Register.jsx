@@ -106,7 +106,7 @@ function Register () {
         <label htmlFor='inputPassword' className='col-sm-2 col-form-label'>
           Password
         </label>
-        <div className='col-sm-10'>
+        <div>
           <input
             type='password'
             className='form-control'
@@ -124,7 +124,7 @@ function Register () {
             className='btn btn-primary w-100'
             onClick={handleSubmit}
           >
-            Primary
+            Register
           </button>
         </div>
       </div>
