@@ -1,23 +1,30 @@
 import useForm from '@/hooks/useForm'
 import { LoginUser } from '@/services/UserServices'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '@/context/Auth'
 
 function Login () {
+  const { loginUser } = useContext(AuthContext)
   const navigate = useNavigate()
+
+  // Función que envia los datos
   const sendData = async (data) => {
     try {
       const result = await LoginUser(data)
 
       if (result.status === 200) {
+        console.log(result)
+        loginUser(result.data.token)
         navigate('/dashboard')
       }
-      console.log(result)
     } catch (error) {
       alert('Ocurrió un error ' + error.message)
       console.log(error)
     }
   }
 
+  // Estado inicial con el hook useForm
   const { input, handleInputChange, handleSubmit } = useForm(sendData, {
     email: '',
     password: ''
