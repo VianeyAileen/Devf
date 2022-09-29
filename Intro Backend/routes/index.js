@@ -1,10 +1,12 @@
 const { Router } = require('express')
 const router = Router()
+const {crearMascota, obtenerTodasMascotas, obtenerMascota, modificarMascota, eliminarMascota} = require('../controllers')
 
-// Petición tipo GET a la ruta /
-router.get('/users', function (req, res) {
-    console.log(req.body)
-    res.json({message: 'Hola soy la respuesta'})
-})
+// CRUD Mascota
+router.post('/mascota', crearMascota)
+router.get('/mascota', obtenerTodasMascotas)
+router.get('/mascota/:idMascota', obtenerMascota)
+router.put('/mascota/:idMascota', modificarMascota)
+router.delete('/mascota/:idMascota', eliminarMascota)
 
 module.exports = router
