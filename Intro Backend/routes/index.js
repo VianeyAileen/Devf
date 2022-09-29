@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const router = Router()
-const {crearMascota, obtenerTodasMascotas, obtenerMascota, modificarMascota, eliminarMascota} = require('../controllers')
+const {crearMascota, obtenerTodasMascotas, obtenerMascota, modificarMascota, eliminarMascota} = require('../controllers/index')
 
 // CRUD Mascota
 router.post('/mascota', crearMascota)

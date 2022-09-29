@@ -3,7 +3,8 @@ const express = require('express')
 // Inicializamos la librería en una constante
 const app = express()
 // Importamos las rutas
-const router = require('./routes')
+// const router = require('./routes/index')
+const router = require('./routes/ejercicio')
 
 // Middlewares --> Obtienen los datos de la petición antes de que lleguen a la ruta.
 // Comunicación a través de formato JSON
