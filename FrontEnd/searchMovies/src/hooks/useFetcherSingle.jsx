@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getMovie } from '../utils/getMovies'
 
-const useFetcherSingle = (id = 'tt0848228') => {
+const useFetcherSingle = (id) => {
   const [dataMovie, setMovie] = useState({})
   const [loading, setLoading] = useState(true)
 
