@@ -1,0 +1,27 @@
+query getwelcome {
+  getWelcome
+}
+
+query getWelcomeWithName($name: String, $age: Int) {
+  getName(name: $name, age: $age)
+}
+
+query getCourses {
+  getCourses{
+    id
+  }
+}
+
+query getCourses {
+  getCourses{
+    title
+  }
+}
+
+query getCourses {
+  getCourses{
+    id,
+    title,
+    description
+  }
+}
