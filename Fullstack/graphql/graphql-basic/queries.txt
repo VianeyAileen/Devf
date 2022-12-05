@@ -8,20 +8,37 @@ query getWelcomeWithName($name: String, $age: Int) {
 
 query getCourses {
   getCourses{
+    id,
+    title,
+    description
+  }
+}
+
+query getCourse($id: Int) {
+  getCourse(id: $id){
+    id,
+    title,
+    description
+  }
+}
+
+mutation addCourse($id: Int!, $title: String!, $description: String) {
+  addCourse(id: $id, title: $title, description: $description) {
+    title,
     id
   }
 }
 
-query getCourses {
-  getCourses{
+mutation updateCourse($id: Int, $title: String, $description: String) {
+  updateCourse(id: $id, title: $title, description: $description) {
+    id,
     title
   }
 }
 
-query getCourses {
-  getCourses{
+mutation removeCourse($id: Int) {
+  removeCourse(id: $id) {
     id,
-    title,
-    description
+    title
   }
 }
