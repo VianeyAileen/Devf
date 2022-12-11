@@ -13,11 +13,3 @@ export async function connect() {
 }
 
 export default connect
-
-// Connect to MongoAtlas
-// const uri =  'mongodb+srv://admin:TEna6ueraJfNykAH@cluster0.t0pxkbg.mongodb.net/course'
-// moongose.connect(uri, {
-//     useNewUriParser: true,
-//     useUnifiedTopology: true
-// }).then((db) => console.log('DB connected'))
-// .catch(err => console.log(err))
