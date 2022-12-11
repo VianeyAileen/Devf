@@ -1,0 +1,34 @@
+query getCourses{
+  getCourses{
+    _id,
+  	title,
+  	description
+  }
+}
+
+query getCourseById($id: ID) {
+  getCourseById(id: $id){
+    _id,
+    title,
+    description,
+  }
+}
+
+mutation createCourse($title: String!, $description: String, $date: String, $isReleased: Boolean){
+  createCourse(input: {title: $title, description: $description, date: $date, isReleased: $isReleased}){
+    _id,
+    title,
+    description,
+    date,
+    isReleased
+  }
+}
+
+mutation updateCourse($title: String!, $description: String, $date: String, $isReleased: Boolean, $_id: ID){
+  updateCourse(input: {title: $title, description: $description, date: $date, isReleased: $isReleased}, _id: $_id){
+    title,
+    description,
+    date,
+    isReleased
+  }
+}
