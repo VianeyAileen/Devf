@@ -1,0 +1,27 @@
+type Query{
+    getNotes: [Note]
+    getNoteById(id: ID): Note 
+    getNoteByDate(date: String): [Note]
+    getNoteByTile(title: String): Note
+}
+
+type Mutation {
+    createNote(input: noteInput): Note
+    updateNote(input: noteInput, _id: ID): Note
+    removeNote(_id: ID): [Note]
+}
+
+type Note {
+    _id: ID
+    title: String!
+    content: String!
+    date: String!
+    author: String!
+}
+
+input noteInput {
+    title: String!
+    content: String!
+    date: String!
+    author: String!
+}

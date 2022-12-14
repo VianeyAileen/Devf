@@ -1,0 +1,66 @@
+######## QUERIES #########
+query getNotes{
+  getNotes{
+    _id,
+    title,
+    content,
+    date,
+    author
+  }
+}
+
+query getNoteById($id: ID) {
+  getNoteById(id: $id) {
+    _id,
+    title,
+    content,
+    date,
+    author
+  }
+}
+
+query getNoteByDate($date: String) {
+  getNoteByDate(date: $date) {
+    _id,
+    title,
+    content,
+    date,
+    author
+  }
+}
+
+query getNoteByTitle($title: String) {
+  getNoteByTile(title: $title) {
+    _id,
+    title,
+    content,
+    date,
+    author
+  }
+}
+
+######## MUTATIONS #########
+mutation createNote($title: String!, $content: String!, $date: String!, $author: String!){
+  createNote(input: {title: $title, content: $content, date: $date, author: $author}){
+    _id,
+    title,
+    content,
+    date,
+    author
+  }
+}
+
+mutation updateNote($title: String!, $content: String!, $date: String!, $author: String!, $_id: ID){
+  updateNote(input: {title: $title, content: $content, date: $date, author: $author}, _id: $_id){
+    title,
+    content,
+    date,
+    author
+  }
+}
+
+mutation removeNote($_id: ID){
+  removeNote(_id:$_id){
+    title
+  }
+}
