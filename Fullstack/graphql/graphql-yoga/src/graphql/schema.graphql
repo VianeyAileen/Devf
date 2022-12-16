@@ -1,6 +1,6 @@
 type Query{
     getNotes: [Note]
-    getNoteById(id: ID): Note 
+    getNoteById(_id: ID): Note 
     getNoteByDate(date: String): [Note]
     getNoteByTile(title: String): Note
 }
@@ -8,11 +8,11 @@ type Query{
 type Mutation {
     createNote(input: noteInput): Note
     updateNote(input: noteInput, _id: ID): Note
-    removeNote(_id: ID): [Note]
+    removeNote(id: ID): [Note]
 }
 
 type Note {
-    _id: ID
+    _id: ID!
     title: String!
     content: String!
     date: String!

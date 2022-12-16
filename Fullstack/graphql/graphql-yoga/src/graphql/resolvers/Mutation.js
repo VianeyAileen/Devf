@@ -8,9 +8,9 @@ const Mutation = {
         const updateNote = await Note.findByIdAndUpdate(_id, input, {new: true})
         return updateNote
     },
-    async removeNote(_, {_id}) {
-        const removeNote = await Note.findByIdAndDelete(_id).find()
-        return removeNote
+    async removeNote(_, {id}) {
+        await Note.findByIdAndDelete(id)
+        return await Note.find()
     }
 }
 

@@ -1,15 +1,14 @@
-import moongose from 'mongoose'
+import mongoose from "mongoose";
 
 export async function connect() {
-    const url = 'mongodb://127.0.0.1:27017/mongodbgraphql'
+
     try {
-        await moongose.connect( url, {
+        await mongoose.connect("mongodb://127.0.0.1:27017/notas", {
             useNewUrlParser: true
         })
-        console.log("Database connected!!", url);        
+        console.log('Database connected!!')
     } catch (error) {
-        return console.log(error);
+        return console.log(error)
     }
+  
 }
-
-export default connect
