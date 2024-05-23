@@ -29,7 +29,7 @@ function App () {
             className='form-control'
             name='buscador'
           />
-          <button className='btn btn-primary'>Buscar</button>
+          <button className='btn btn-primary'>Search</button>
         </div>
       </form>
       <br />

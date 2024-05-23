@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
 
-    <div className='flex space-x-10 p-4'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 py-5'>
       {data &&
         data.getNotes.map(({ _id, title, author, content, date }) => (
           <div key={_id} className='max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700'>
